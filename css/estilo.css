@@ -8,7 +8,7 @@
 body {
     background-color: #fff;
     color: #777;
-    font-family: 'Crete Round', serif;
+    font-family: 'Crete Round', sans-serif;
 }
 html {
     scroll-behavior: smooth;
@@ -21,7 +21,7 @@ html {
 
 /*Titulos*/
 h1 {
-    font-family: 'Crete Round', serif;
+    
     font-weight: bold;
     color: var(--clr-white);
     font-size: 55px;
