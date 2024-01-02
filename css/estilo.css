@@ -168,7 +168,7 @@ header nav ul li a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(/img/primary-content-image.jpg) no-repeat center/cover;
+    background: url(../img/primary-content-image.jpg) no-repeat center/cover;
     width: min(320);
     height: 500px;
     filter: saturate(150%);
@@ -217,7 +217,7 @@ header nav ul li a{
     opacity: 0.7;
     width: 100%;
     min-height: 500px;
-    background: url("/img/cloud2.png") center / cover repeat;
+    background: url("../img/cloud2.png") center / cover repeat;
     background-size: 200% 100%;
     z-index: -1;
     animation: var(--cloud-animation);
@@ -230,7 +230,7 @@ header nav ul li a{
     opacity: 0.8;
     width: 100%;
     min-height: 100%;
-    background: url("/img/cloud2.png") center / cover no-repeat;
+    background: url("../img/cloud2.png") center / cover no-repeat;
     z-index: -3;
 }
 
