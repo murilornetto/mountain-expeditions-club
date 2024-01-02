@@ -189,14 +189,16 @@ header nav ul li a{
 }
 
 #primary-content h2{
-    color:var(--clr-white);
+    color:var(--clr-primary-dark);
 
 }
 #primary-content p{
     max-width: 50ch;
-    color: var(--clr-white);
+    color: var(--clr-primary-dark);
 }
-
+#mountain-logo-alt{
+    opacity:1;
+}
 .animation-cloud {
     --cloud-animation: none;
     position: relative;
