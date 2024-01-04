@@ -6,5 +6,4 @@ function clickMenu(){
       itens.style.display = 'block';
       document.getElementById("burguer-icon").src = "img/close-menu-hamburguer.svg";
   }
-  
 }
