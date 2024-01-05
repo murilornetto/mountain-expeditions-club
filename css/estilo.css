@@ -85,6 +85,10 @@ a:hover{
     color: var(--clr--blue-ligth);
 }
 
+#menu li a:hover{
+    color: var(--clr--blue-ligth);
+}
+
 #menu{
     margin-top: 50px;
 }
