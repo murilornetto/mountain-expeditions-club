@@ -1,27 +1,27 @@
-/*General*/
+/*#region General*/
 :root{
     --clr-primary-dark: hsl(220, 24%, 20%);
     --clr-primary-desat: hsl(219, 12%, 34%);
     --clr--blue-ligth:#02b8dd;
     --clr-white: white;
 }
-body {
+body{
     background-color: #fff;
     color: #777;
     font-family: 'Crete Round', sans-serif;
     margin: 0 auto;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    
 
 }
-html {
+html{
     scroll-behavior: smooth;
 }
-.container {
-    display: grid;
-    grid-template-rows: 120px  680px repeat(3, 1fr) 400px 450px;
-    text-align: center;
-}
-
-/*Titles*/
+/*#endregion General*/
+/*#region Titles*/
 h1 {
     font-weight: bold;
     color: var(--clr-white);
@@ -61,34 +61,25 @@ h5 {
     text-transform: uppercase;
     margin-bottom: 0px;
 }
-
-/*Header*/
+/*#endregion Titles*/
+/*#region Header*/
 header{
     display: flex;
     justify-content: center;
     text-align: center;
 }
-
-.header-banner-logo{
-    width: min(80%, 250px);
-    margin-top: 100px;
-}
-
 a{
     text-decoration: none;
+}
+a:hover{
+    color: var(--clr--blue-ligth);
+}
+#menu li a:hover{
+    color: var(--clr--blue-ligth);
 }
 header a{
     color: var(--clr-primary-dark);
 }
-
-a:hover{
-    color: var(--clr--blue-ligth);
-}
-
-#menu li a:hover{
-    color: var(--clr--blue-ligth);
-}
-
 #menu{
     margin-top: 50px;
 }
@@ -109,16 +100,20 @@ ul#menu li a{
     display: none; 
     cursor: pointer;
 }
-
-/*Hero Image*/
+/*#endregion Header*/
+/*#region Hero Image*/
 #hero-image{
     background: #e8eced url('../img/hero-image-3.jpg') no-repeat center/cover ;
     text-align: center;
 }
-
+#header-banner-logo{
+    width: min(250px);
+    margin-top: 50px;
+}
 #hero-image p{
     color: var(--clr-white);
     font-size: 1.5rem;
+    margin-top: 50px;
 }
 .button-1 {
     display: block;
@@ -130,21 +125,20 @@ ul#menu li a{
     height: 50px;
     font-size: 20px;
     line-height: 50px;
-    margin: 0 auto;
-
+    margin: 50px auto;
 }
 
 .button-1:hover {
     background-color: var(--clr--blue-ligth);
     color: #fff;
 }
-
-/*About Us*/
+/*#endregion Hero Image*/
+/*#region About Us*/
 #about-us{
-   display: flex;
-   flex-direction: column;
-   margin-top: 50px;
-   height: 550px;
+display: flex;
+flex-direction: column;
+margin-top: 50px;
+height: 550px;
 }
 
 #about-us h2{
@@ -155,7 +149,7 @@ ul#menu li a{
     line-height: 1.7;
     text-align: start;
     font-size: 1.3rem;
-    padding: 20px;
+    
 }
 
 #about-us-text{
@@ -164,7 +158,11 @@ ul#menu li a{
     justify-content: center;
 }
 
-/*Primary Content*/
+#text-mobile{
+    display:none;
+}
+/*#endregion About Us*/
+/*#region Primary Content*/
 #primary-content{
     display: flex;
     flex-direction: column;
@@ -190,8 +188,8 @@ ul#menu li a{
     max-width: 50ch;
     color: var(--clr-primary-dark);
 }
-
-/*Cloud Animation*/
+/*#endregion Primary Content*/
+/*#region Cloud Animation*/
 .animation-cloud {
     position: relative;
     height: auto;
@@ -238,7 +236,7 @@ ul#menu li a{
     }
 
     60% {
-       transform: scale(1.5);
+    transform: scale(1.5);
     }
 
     100% {
@@ -246,14 +244,13 @@ ul#menu li a{
         transform: scale(1.1);
     }
 }
-
-/*Secondary Content*/
+/*#endregion Cloud Animation*/
+/*#region Secondary Content*/
 #secondary-content{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     justify-items: center;
-    align-items: center;
-    align-content: center;
+    margin-top: 100px;
 }
 
 #secondary-content article {
@@ -302,8 +299,8 @@ article h4 {
     margin-right: 10vw;
 
 }
-
-/*Form*/
+/*#endregion Secondary Content*/
+/*#region Form*/
 #feature-3 {
     display: flex;
     flex-direction: column;
@@ -339,7 +336,6 @@ form h2{
 }
 
 #btn-submit{
-
     display: block;
     width: 150px;
     height: 50px;
@@ -365,8 +361,8 @@ form h2{
     border-bottom: 1px solid var(--clr--blue-ligth);
     padding: 0 0 20px 0;
 }
-
-/*Footer*/
+/*#endregion Form*/
+/*#region Footer*/
 footer{
     display: flex;
     flex-direction: column;
@@ -416,8 +412,8 @@ footer p{
     font-size: 0.8rem;
     text-align: center;
 }
-
-
+/*#endregion Footer*/
+/*#region @medias*/
 @media (max-width: 700px){
     .container{
         display:flex;
@@ -438,8 +434,8 @@ footer p{
     }
     #burguer-icon{
         display: block; 
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
     #itens{
         transition: opacity ease 1s;
@@ -451,10 +447,19 @@ footer p{
         display: block;
     }
     ul#menu li a{
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
-    #about-us p{
-        margin-top: -5px;
+    #about-us-text{  
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+    #about-us p:not(#text-mobile){
+        display:none; 
+    }
+    #text-mobile{
+        display:block;
+      
     }
     #secondary-content{
         display: flex;
@@ -462,7 +467,7 @@ footer p{
         flex-wrap: wrap;
         margin-top: 50px;
     }
-    #secondary-content article {
+    #secondary-content article{
         margin: 0 auto;
     }
     footer{
@@ -492,7 +497,17 @@ footer p{
 
 }
 
+@media(max-width: 500px){
+    #secondary-content article {
+        width: 220px;
+    }
+
+}
 @media (max-width: 400px){
+    body{
+        margin-right: 0px;
+    }
+
     #mountain-logo-alt{
         margin-top: -50px;
     }
@@ -506,3 +521,4 @@ footer p{
         padding-top: 30px;
     }
 }
+/*#endregion @medias*/
